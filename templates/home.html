@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block title %} HOME PAGE {% endblock %} {% block content %}
+
+<head>
+
+    <link rel="stylesheet" href="{{url_for('static', filename = 'styles/style.css')}}">
+
+</head>
+
+<body>
+    <h1 class="home-name">This is home page</h1>
+    <img src="{{url_for('static', filename = 'images/856548.jpg')}}" alt="">
+</body>
+{% endblock %}

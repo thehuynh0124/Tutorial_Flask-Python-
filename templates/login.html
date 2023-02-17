@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block title %}LOGIN PAGE{% endblock %} {% block content %}
+<h2>This is login page</h2>
+{% with messages = get_flashed_messages() %} {% if messages %} {% for m in messages %}
+<p>{{m}}</p>
+{% endfor %} {% endif %} {% endwith %}
+<div style="margin-left: 50px;">
+    <form action="#" method="post">
+        <label for="">Name</label>
+        <input type="text" name="name">
+        <button style="background-color:rgb(92, 173, 254);" type="submit">Login</button>
+    </form>
+</div>
+
+{% endblock %}

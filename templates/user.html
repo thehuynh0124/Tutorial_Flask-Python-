@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}LOGIN PAGE{% endblock %} {% block content %}
+<h2>HELLO {{user}}</h2>
+{% with messages = get_flashed_messages() %} {% if messages %} {% for m in messages %}
+<p>{{m}}</p>
+{% endfor %} {% endif %} {% endwith %}
+<div style="margin-left: 50px;">
+    <form action="#" method="post">
+        <label for="email">Email</label>
+        <input type="email" name="email" , placeholder="Enter email..." value="{{email if email}}">
+        <button style="background-color:rgb(92, 173, 254);" type="submit">Submit</button>
+        <input type="name" name="name" , placeholder="Enter name..." value="{{user if user}}">
+        <button style="background-color:rgb(92, 173, 254);" type="submit">Deleta</button>
+    </form>
+</div>
+{% endblock %}
